@@ -6,8 +6,15 @@
     <description>Recent content in Posts on boreddevnl</description>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Jan 2026 03:41:31 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 19:56:58 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brewkernel 2 years 🎉</title>
+      <link>http://localhost:1313/posts/brewkernel2years/</link>
+      <pubDate>Thu, 15 Jan 2026 19:56:58 +0100</pubDate>
+      <guid>http://localhost:1313/posts/brewkernel2years/</guid>
+      <description>Some talk about my hobbykernel.</description>
+    </item>
     <item>
       <title>An In-Depth Guide to Large Language Models</title>
       <link>http://localhost:1313/posts/intro_to_llms/</link>
