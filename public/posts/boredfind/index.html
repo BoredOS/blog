@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS | boreddevnl</title>
+<meta name="keywords" content="boredos, development, networking, osdev">
+<meta name="description" content="If you&rsquo;ve been following my work on boredOS, you know that I&rsquo;ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.
+But once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today&rsquo;s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.">
+<meta name="author" content="boreddevnl">
+<link rel="canonical" href="http://localhost:1313/posts/boredfind/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/boredfind/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/posts/boredfind/">
+  <meta property="og:site_name" content="boreddevnl">
+  <meta property="og:title" content="Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS">
+  <meta property="og:description" content="If you’ve been following my work on boredOS, you know that I’ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.
+But once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today’s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-03T22:48:46+01:00">
+    <meta property="article:modified_time" content="2026-03-03T22:48:46+01:00">
+    <meta property="article:tag" content="Boredos">
+    <meta property="article:tag" content="Development">
+    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Osdev">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS">
+<meta name="twitter:description" content="If you&rsquo;ve been following my work on boredOS, you know that I&rsquo;ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.
+But once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today&rsquo;s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS",
+      "item": "http://localhost:1313/posts/boredfind/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS",
+  "name": "Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS",
+  "description": "If you\u0026rsquo;ve been following my work on boredOS, you know that I\u0026rsquo;ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.\nBut once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today\u0026rsquo;s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.\n",
+  "keywords": [
+    "boredos", "development", "networking", "osdev"
+  ],
+  "articleBody": "If you’ve been following my work on boredOS, you know that I’ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.\nBut once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today’s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.\nEnter BoredFind.\nWhat is BoredFind? BoredFind is a ridiculously lightweight search engine and web proxy. Under the hood, it hooks into DuckDuckGo to grab search results, but before it sends any website back to the browser, it aggressively strips the page down to the absolute bare minimum.\nIt rips out the styling, scripts, and heavy DOM elements, converting complex websites into simple text and HTML 2.0-style hyperlinks. It even aggregates news from RSS feeds! Everything is constrained and normalized so that it renders perfectly and beautifully within my OS’s VGA font limitations.\nBoredfind also includes some RSS news feed functionality allowing you to read the latest news from various sources, including the BBC, NOS and the NPR.\nWhy Build It? I actually didn’t want to build this at first. My original plan was to point my browser at FrogFind, an awesome project created by Action Retro (whose channel and work I absolutely love) designed to let vintage computers browse the modern internet.\nIt sounded like the perfect fit for boredOS. Unfortunately, when I tried it, I found that FrogFind wasn’t able to load any searches and I remember it having a lot of sites it couldn’t parse before it completely broke.\nSince I had already built my own OS, my own TCP/IP stack, and my own browser… I figured I might as well build my own proxy, too.\nI whipped up BoredFind in PHP. It acts as the perfect middleman, taking the chaos of the 2026 internet and digesting it into a hyper-simple format that my browser can easily parse and display.\nThere is something so satisfying about doing a web search when you wrote the OS, the network stack, the browser, and the search proxy. It’s the ultimate giga chad coding experience.\nCheck boredFind out for yourself!\nAlso have a look at the BoredOS Project.\n",
+  "wordCount" : "399",
+  "inLanguage": "en",
+  "datePublished": "2026-03-03T22:48:46+01:00",
+  "dateModified": "2026-03-03T22:48:46+01:00",
+  "author":{
+    "@type": "Person",
+    "name": "boreddevnl"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/boredfind/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "boreddevnl",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="boreddevnl (Alt + H)">boreddevnl</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://boreddev.nl/" title="Back to main page">
+                    <span>Back to main page</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS
+    </h1>
+    <div class="post-meta"><span title='2026-03-03 22:48:46 +0100 CET'>March 3, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>boreddevnl</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#what-is-boredfind" aria-label="What is BoredFind?">What is BoredFind?</a></li>
+                <li>
+                    <a href="#why-build-it" aria-label="Why Build It?">Why Build It?</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>If you&rsquo;ve been following my work on <strong>boredOS</strong>, you know that I&rsquo;ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.</p>
+<p>But once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today&rsquo;s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.</p>
+<p>Enter <strong>BoredFind</strong>.</p>
+<h2 id="what-is-boredfind">What is <a href="http://find.boreddev.nl">BoredFind</a>?<a hidden class="anchor" aria-hidden="true" href="#what-is-boredfind">#</a></h2>
+<p>BoredFind is a ridiculously lightweight search engine and web proxy. Under the hood, it hooks into DuckDuckGo to grab search results, but before it sends any website back to the browser, it aggressively strips the page down to the absolute bare minimum.</p>
+<p>It rips out the styling, scripts, and heavy DOM elements, converting complex websites into simple text and HTML 2.0-style hyperlinks. It even aggregates news from RSS feeds! Everything is constrained and normalized so that it renders perfectly and beautifully within my OS&rsquo;s VGA font limitations.</p>
+<p>Boredfind also includes some RSS news feed functionality allowing you to read the latest news from various sources, including the BBC, NOS and the NPR.</p>
+<h2 id="why-build-it">Why Build It?<a hidden class="anchor" aria-hidden="true" href="#why-build-it">#</a></h2>
+<p>I actually didn&rsquo;t want to build this at first. My original plan was to point my browser at <strong>FrogFind</strong>, an awesome project created by <a href="https://www.youtube.com/c/ActionRetro">Action Retro</a> (whose channel and work I absolutely love) designed to let vintage computers browse the modern internet.</p>
+<p>It sounded like the perfect fit for boredOS. Unfortunately, when I tried it, I found that FrogFind wasn&rsquo;t able to load any searches and I remember it having a lot of sites it couldn&rsquo;t parse before it completely broke.</p>
+<p>Since I had already built my own OS, my own TCP/IP stack, and my own browser&hellip; I figured I might as well build my own proxy, too.</p>
+<p>I whipped up BoredFind in PHP. It acts as the perfect middleman, taking the chaos of the 2026 internet and digesting it into a hyper-simple format that my browser can easily parse and display.</p>
+<p>There is something so satisfying about doing a web search when you wrote the OS, the network stack, the browser, <em>and</em> the search proxy. It&rsquo;s the ultimate giga chad coding experience.</p>
+<p>Check <a href="http://find.boreddev.nl">boredFind</a> out for yourself!</p>
+<p>Also have a look at the <a href="https://github.com/boreddevnl/boredOS">BoredOS Project.</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/boredos/">Boredos</a></li>
+      <li><a href="http://localhost:1313/tags/development/">Development</a></li>
+      <li><a href="http://localhost:1313/tags/networking/">Networking</a></li>
+      <li><a href="http://localhost:1313/tags/osdev/">Osdev</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">boreddevnl</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

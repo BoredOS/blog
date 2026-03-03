@@ -6,6 +6,42 @@
     <description>Recent content in Tags on boreddevnl</description>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 03 Mar 2026 22:48:46 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boredos</title>
+      <link>http://localhost:1313/tags/boredos/</link>
+      <pubDate>Tue, 03 Mar 2026 22:48:46 +0100</pubDate>
+      <guid>http://localhost:1313/tags/boredos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>http://localhost:1313/tags/development/</link>
+      <pubDate>Tue, 03 Mar 2026 22:48:46 +0100</pubDate>
+      <guid>http://localhost:1313/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/tags/networking/</link>
+      <pubDate>Tue, 03 Mar 2026 22:48:46 +0100</pubDate>
+      <guid>http://localhost:1313/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Osdev</title>
+      <link>http://localhost:1313/tags/osdev/</link>
+      <pubDate>Tue, 03 Mar 2026 22:48:46 +0100</pubDate>
+      <guid>http://localhost:1313/tags/osdev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frogfind</title>
+      <link>http://localhost:1313/tags/frogfind/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/frogfind/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

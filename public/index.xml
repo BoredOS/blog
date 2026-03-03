@@ -6,8 +6,16 @@
     <description>Recent content on boreddevnl</description>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Jan 2026 19:56:58 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2026 22:48:46 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS</title>
+      <link>http://localhost:1313/posts/boredfind/</link>
+      <pubDate>Tue, 03 Mar 2026 22:48:46 +0100</pubDate>
+      <guid>http://localhost:1313/posts/boredfind/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve been following my work on &lt;strong&gt;boredOS&lt;/strong&gt;, you know that I&amp;rsquo;ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.&lt;/p&gt;
+&lt;p&gt;But once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today&amp;rsquo;s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Brewkernel 2 years 🎉</title>
       <link>http://localhost:1313/posts/brewkernel2years/</link>
