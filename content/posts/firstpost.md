@@ -1,21 +1,39 @@
 +++
-date = '2026-01-08T23:01:53+01:00'
+date = '2026-06-07T15:00:00+02:00'
 draft = false
-title = 'Hello World!'
-summary = "This is a blog i'll be using to document my coding journey. Read more to find out who I am!"
+title = 'Welcome to the BoredOS Blog'
+summary = "What this blog is, who it's for, and why we decided to start writing."
+tags = [
+  "boredos",
+  "meta",
+  "dev log"
+]
 +++
 
+Hey there. Welcome to the official BoredOS blog.
 
-This is a blog i'll be using to document my coding journey. But before we get into that let me tell you who i am!
+If you've somehow stumbled here without knowing what BoredOS is: it's a general-purpose UNIX-like operating system built entirely from scratch. No Linux under the hood, no borrowed kernel. Just a lot of C, a lot of late nights, and a growing community of people who apparently enjoy this kind of suffering as much as I do.
 
-I'm Chris, a mostly self-learned developer from the Netherlands. I'm still in high-school and have followed a computer
-science class for about 2 years now. My dad is a data analyst and has made a huge home lab (which i recently started putting my own stuff in to)
-and is also the person that really got me into developing, he also has a really nice blog also hosted on Hugo at [spithout.net](https://spithout.net) if you want to check it out. 
+## What this blog is for
 
-I'll mostly be documenting on my computer science projects and what i learn from them, UX principles for example with my current computer science assignment. I'll also be documenting personal projects and how i set them up and how you can too!
+This isn't a marketing page. It's a dev log - a place where the people building BoredOS can write about what they're working on, what broke, what they learned, and what's coming next.
 
-Thanks for reading one of many posts i'll be making here!
+Some posts will be deep technical dives. Some will be retrospectives. Some might just be "here's a weird thing I found in the codebase and here's why it's like that." The goal is to document the project in a human way, not just through commits and changelogs.
 
----
+## Where we've been
 
-Check out my github repo's at [github.com/boreddevnl](https://github.com/boreddevnl)!
+BoredOS has been going for just over three years now. What started as me following a bad GRUB tutorial in late 2023 has grown into a real operating system: 380,000+ lines of code, 12 contributors, 3 maintainers, and nearly 200 GitHub stars. If you want the full origin story, I wrote about it in detail here: [BoredOS: Three years of building an OS from scratch (And loving every minute of it)](/posts/boredos/).
+
+## Who's writing here
+
+For now, that's mostly me (Christiaan). But this blog is open to all contributors. If you've sent a PR, opened an issue, or just been part of the community, you have something worth writing about.
+
+If you want to contribute a post, reach out or open a PR on the blog repo.
+
+## Where to find us
+
+The main project lives at [github.com/BoredOS/BoredOS](https://github.com/BoredOS/BoredOS). Issues, discussions, and PRs are always welcome. If you're curious about the project or want to get involved, that's the place to start.
+
+Thanks for reading. More posts coming soon.
+
+— Christiaan

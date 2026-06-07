@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on boreddevnl</title>
+    <title>Posts on BoredOS Project Blog</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on boreddevnl</description>
+    <description>Recent content in Posts on BoredOS Project Blog</description>
     <generator>Hugo -- 0.160.1</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2026 14:46:52 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 15:00:00 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>BoredOS: Two years of building an OS from scratch (And loving every minute of it)</title>
+      <title>Welcome to the BoredOS Blog</title>
+      <link>http://localhost:1313/posts/firstpost/</link>
+      <pubDate>Sun, 07 Jun 2026 15:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/posts/firstpost/</guid>
+      <description>What this blog is, who it&amp;rsquo;s for, and why we decided to start writing.</description>
+    </item>
+    <item>
+      <title>BoredOS: Three years of building an OS from scratch (And loving every minute of it)</title>
       <link>http://localhost:1313/posts/boredos/</link>
       <pubDate>Sun, 07 Jun 2026 14:46:52 +0200</pubDate>
       <guid>http://localhost:1313/posts/boredos/</guid>
-      <description>&lt;p&gt;My name is Christiaan, and somewhere in late 2023 I followed a terrible tutorial on how to boot with GRUB and print text to the screen. That was a mistake. A wonderful, consuming, life-ruining mistake.&lt;/p&gt;
-&lt;p&gt;I got hooked immediately. Not because the tutorial was good  (it wasn&amp;rsquo;t), but because something clicked when I saw those first characters appear on a screen running code I had written, on a machine that didn&amp;rsquo;t know it was supposed to do anything at all. I started poking at things I didn&amp;rsquo;t understand. I made some genuinely awful decisions. I shipped jank I&amp;rsquo;m still slightly embarrassed about. And I couldn&amp;rsquo;t stop.&lt;/p&gt;</description>
+      <description>The story of how a bad tutorial turned into a three-year (and ongoing) obsession.</description>
     </item>
     <item>
       <title>Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS</title>
@@ -23,20 +29,6 @@
       <guid>http://localhost:1313/posts/boredfind/</guid>
       <description>&lt;p&gt;If you&amp;rsquo;ve been following my work on &lt;strong&gt;boredOS&lt;/strong&gt;, you know that I&amp;rsquo;ve been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser.&lt;/p&gt;
 &lt;p&gt;But once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today&amp;rsquo;s JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Arduino Fun</title>
-      <link>http://localhost:1313/posts/arduinofun/</link>
-      <pubDate>Sat, 10 Jan 2026 17:12:37 +0100</pubDate>
-      <guid>http://localhost:1313/posts/arduinofun/</guid>
-      <description>A computer science Arduino Project. Read on to see how everything suddenly went wrong!</description>
-    </item>
-    <item>
-      <title>Hello World!</title>
-      <link>http://localhost:1313/posts/firstpost/</link>
-      <pubDate>Thu, 08 Jan 2026 23:01:53 +0100</pubDate>
-      <guid>http://localhost:1313/posts/firstpost/</guid>
-      <description>This is a blog i&amp;rsquo;ll be using to document my coding journey. Read more to find out who I am!</description>
     </item>
   </channel>
 </rss>

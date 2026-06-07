@@ -38,5 +38,5 @@ There is something so satisfying about doing a web search when you wrote the OS,
 
 Check [boredFind](http://find.boreddev.nl) out for yourself!
 
-Also have a look at the [BoredOS Project.](https://github.com/boreddevnl/boredOS)
-
+Also have a look at the [BoredOS Project.](https://github.com/BoredOS/boredOS)
+*This article is originally from https://blog.boreddev.nl*

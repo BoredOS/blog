@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Boredos on boreddevnl</title>
+    <title>Boredos on BoredOS Project Blog</title>
     <link>http://localhost:1313/tags/boredos/</link>
-    <description>Recent content in Boredos on boreddevnl</description>
+    <description>Recent content in Boredos on BoredOS Project Blog</description>
     <generator>Hugo -- 0.160.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Mar 2026 22:48:46 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 15:00:00 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/boredos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to the BoredOS Blog</title>
+      <link>http://localhost:1313/posts/firstpost/</link>
+      <pubDate>Sun, 07 Jun 2026 15:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/posts/firstpost/</guid>
+      <description>What this blog is, who it&amp;rsquo;s for, and why we decided to start writing.</description>
+    </item>
+    <item>
+      <title>BoredOS: Three years of building an OS from scratch (And loving every minute of it)</title>
+      <link>http://localhost:1313/posts/boredos/</link>
+      <pubDate>Sun, 07 Jun 2026 14:46:52 +0200</pubDate>
+      <guid>http://localhost:1313/posts/boredos/</guid>
+      <description>The story of how a bad tutorial turned into a three-year (and ongoing) obsession.</description>
+    </item>
     <item>
       <title>Introducing BoredFind: Browsing the Modern Web from a Scratch-Built OS</title>
       <link>http://localhost:1313/posts/boredfind/</link>

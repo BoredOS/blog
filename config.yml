@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://blog.boreddev.nl/"
-title: boreddevnl
+baseURL: "https://blog.boredos.dev/"
+title: BoredOS Project Blog
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -29,7 +29,7 @@ languages:
     menu:
       main:
         - name: Back to main page
-          url: https://boreddev.nl/
+          url: https://boredos.dev
           weight: 1
         - name: Archives
           url: posts/
@@ -44,8 +44,8 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "BoreddevNL - A blog about programming, technology and other stuff."
-  author: boreddevnl
+  description: "A community blog for the BoredOS project."
+  author: BoredOS Project
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
@@ -67,7 +67,7 @@ params:
 
   profileMode:
     enabled: false
-    title: boreddevnl
+    title: BoredOS
     imageUrl: "#"
     imageTitle: my image
     buttons:
@@ -77,17 +77,15 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "BoreddevNL"
+    Title: "BoredOS Project"
     Content: >
-      👋 Welcome to my blog!
+      👋 Welcome to the BoredOS Project blog!
 
-      - This site hosts my articles about programming, technology, and other topics that interest me and maybe you aswell!
-      - Have a look at my first post [Here!](https://blog.boreddev.nl/posts/firstpost/) detailing what this blog is about.
-
+      - This site hosts articles about the BoredOS project, programming, technology, and other topics that interest us and maybe you as well!
   socialIcons:
     - name: github
       title: View Github Account
-      url: "https://github.com/boreddevnl"
+      url: "https://github.com/BoredOS"
 
 
   # editPost removed to hide 'Suggest Changes' on posts

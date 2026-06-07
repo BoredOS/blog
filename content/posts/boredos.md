@@ -10,7 +10,7 @@ tags=[
   "osdev"
 ]
 +++
-My name is Christiaan, and somewhere in late 2023 I followed a terrible tutorial on how to boot with GRUB and print text to the screen. That was a mistake. A wonderful, consuming, life-ruining mistake.
+My name is Christiaan, the founder of BoredOS, and somewhere in late 2023 I followed a terrible tutorial on how to boot with GRUB and print text to the screen. That was a mistake. A wonderful, consuming, life-ruining mistake.
 
 I got hooked immediately. Not because the tutorial was good  (it wasn't), but because something clicked when I saw those first characters appear on a screen running code I had written, on a machine that didn't know it was supposed to do anything at all. I started poking at things I didn't understand. I made some genuinely awful decisions. I shipped jank I'm still slightly embarrassed about. And I couldn't stop.
 
@@ -32,3 +32,4 @@ I didn't expect anyone else to care about this, though I made some TikToks here 
 BoredOS started with goals that were, honestly, all over the place. That's still very true - and i've made peace with it. Passion projects don't need a roadmap. They simply need dedication and love.
 
 If any of this sounds interesting, the repo is [Available on GitHub](https://github.com/BoredOS/BoredOS). Contributions are welcome, questions and suggestions even more so. (Especially if it's pointing out the jank i need to fix.)
+*This article is originally from https://blog.boreddev.nl*
