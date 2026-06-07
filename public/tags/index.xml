@@ -4,7 +4,7 @@
     <title>Tags on boreddevnl</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on boreddevnl</description>
-    <generator>Hugo -- 0.154.3</generator>
+    <generator>Hugo -- 0.160.1</generator>
     <language>en</language>
     <lastBuildDate>Tue, 03 Mar 2026 22:48:46 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -34,13 +34,6 @@
       <link>http://localhost:1313/tags/osdev/</link>
       <pubDate>Tue, 03 Mar 2026 22:48:46 +0100</pubDate>
       <guid>http://localhost:1313/tags/osdev/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Frogfind</title>
-      <link>http://localhost:1313/tags/frogfind/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/frogfind/</guid>
       <description></description>
     </item>
   </channel>

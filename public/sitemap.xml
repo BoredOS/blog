@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-15T19:56:58+01:00</lastmod>
+    <lastmod>2026-06-07T14:46:52+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/brewkernel2years/</loc>
-    <lastmod>2026-01-15T19:56:58+01:00</lastmod>
+    <loc>http://localhost:1313/posts/boredos/</loc>
+    <lastmod>2026-06-07T14:46:52+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-15T19:56:58+01:00</lastmod>
+    <lastmod>2026-06-07T14:46:52+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/intro_to_llms/</loc>
-    <lastmod>2026-01-11T03:41:31+01:00</lastmod>
+    <loc>http://localhost:1313/tags/boredos/</loc>
+    <lastmod>2026-03-03T22:48:46+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/development/</loc>
+    <lastmod>2026-03-03T22:48:46+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/boredfind/</loc>
+    <lastmod>2026-03-03T22:48:46+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/networking/</loc>
+    <lastmod>2026-03-03T22:48:46+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/osdev/</loc>
+    <lastmod>2026-03-03T22:48:46+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-03T22:48:46+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/arduinofun/</loc>
     <lastmod>2026-01-10T17:12:37+01:00</lastmod>
@@ -24,7 +39,5 @@
     <lastmod>2026-01-08T23:01:53+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
