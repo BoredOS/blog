@@ -10,6 +10,7 @@ tags=[
 ]
 +++
 
+Hiya, I'm Chris, the BoredOS founder.
 If you've been following my work on **boredOS**, you know that I've been building the operating system entirely from scratch. Recently, that journey led me down the rabbit hole of creating my own custom network stack and even a bespoke web browser. 
 
 But once you have a scratch-built browser, you quickly run into a massive problem: the modern internet is incredibly heavily bloated. Loading today's JavaScript-heavy websites on a minimalist, homebrew browser is a nightmare, but I still really wanted an easy way to actually surf the web from within my own OS.
