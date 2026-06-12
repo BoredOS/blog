@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Dev Log on BoredOS Project Blog</title>
-    <link>http://localhost:1313/tags/dev-log/</link>
-    <description>Recent content in Dev Log on BoredOS Project Blog</description>
+    <title>Important on BoredOS Project Blog</title>
+    <link>http://localhost:1313/tags/important/</link>
+    <description>Recent content in Important on BoredOS Project Blog</description>
     <generator>Hugo -- 0.160.1</generator>
     <language>en</language>
     <lastBuildDate>Fri, 12 Jun 2026 20:37:37 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/dev-log/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/important/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>We have stopped making releases.</title>
       <link>http://localhost:1313/posts/releases/</link>
@@ -22,20 +22,6 @@
 &lt;em&gt;dev&lt;/em&gt;: Try the nightly build
 &lt;em&gt;user&lt;/em&gt;: wow that works
 This happens frequently enough that we&amp;rsquo;ve decided releases aren&amp;rsquo;t worth maintaining.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Welcome to the BoredOS Blog</title>
-      <link>http://localhost:1313/posts/firstpost/</link>
-      <pubDate>Sun, 07 Jun 2026 15:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/posts/firstpost/</guid>
-      <description>What this blog is, who it&amp;rsquo;s for, and why we decided to start writing.</description>
-    </item>
-    <item>
-      <title>BoredOS: Three years of building an OS from scratch (And loving every minute of it)</title>
-      <link>http://localhost:1313/posts/boredos/</link>
-      <pubDate>Sun, 07 Jun 2026 14:46:52 +0200</pubDate>
-      <guid>http://localhost:1313/posts/boredos/</guid>
-      <description>The story of how a bad tutorial turned into a three-year (and ongoing) obsession.</description>
     </item>
   </channel>
 </rss>
