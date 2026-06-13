@@ -2,6 +2,7 @@
 date = '2026-06-13T20:50:53+02:00'
 draft = false
 title = 'Building a compositor for BoredOS'
+summary = 'Nova is a new Wayland-style compositor for BoredOS. Here's how it came together.
 +++
 Hi there, I'm Chris, the founder of BoredOS, as some of you may know by now.
 For the last few weeks i've been working on [Nova](https://github.com/boredos/nova) a Wayland-style compositor specifically made for the BoredOS project.
