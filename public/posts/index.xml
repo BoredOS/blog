@@ -6,8 +6,18 @@
     <description>Recent content in Posts on BoredOS Project Blog</description>
     <generator>Hugo -- 0.160.1</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Jun 2026 20:37:37 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 20:50:53 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Novantk</title>
+      <link>http://localhost:1313/posts/novantk/</link>
+      <pubDate>Sat, 13 Jun 2026 20:50:53 +0200</pubDate>
+      <guid>http://localhost:1313/posts/novantk/</guid>
+      <description>&lt;p&gt;Hi there, I&amp;rsquo;m Chris, the founder of BoredOS, as some of you may know by now.
+For the last few weeks i&amp;rsquo;ve been working on &lt;a href=&#34;https://github.com/boredos/nova&#34;&gt;Nova&lt;/a&gt; a Wayland-style compositor specifically made for the BoredOS project.&lt;/p&gt;
+&lt;h2 id=&#34;history&#34;&gt;History&lt;/h2&gt;
+&lt;p&gt;Previously, BoredOS was using a kernelUI for some reason&amp;hellip; Priorities i guess? Point is: It was super unstable and slow. Therefore, a month ago or so we completely removed that old window manager, along with the 30 million slow syscalls and apps made for it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>We have stopped making releases.</title>
       <link>http://localhost:1313/posts/releases/</link>
@@ -16,12 +26,21 @@
       <description>&lt;p&gt;No, we&amp;rsquo;re not stopping with development of BoredOS, that will of course continue. We are simply stopping making releases (eg 26.6.0).&lt;/p&gt;
 &lt;p&gt;Maintaining releases creates a lot of friction, and we often see situations like this:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: I downloaded BoredOS and it doesn&amp;rsquo;t boot
-&lt;em&gt;dev&lt;/em&gt;: What version?
-&lt;em&gt;user&lt;/em&gt;: idk, 26.6 or something
-&lt;em&gt;dev&lt;/em&gt;: Try the nightly build
-&lt;em&gt;user&lt;/em&gt;: wow that works
-This happens frequently enough that we&amp;rsquo;ve decided releases aren&amp;rsquo;t worth maintaining.&lt;/p&gt;</description>
+&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: I downloaded BoredOS and it doesn&amp;rsquo;t boot&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;dev&lt;/em&gt;: What version?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: idk, 26.6 or something&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;dev&lt;/em&gt;: Try the nightly build&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: wow that works&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This happens frequently enough that we&amp;rsquo;ve decided releases aren&amp;rsquo;t worth maintaining.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Welcome to the BoredOS Blog</title>

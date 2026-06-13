@@ -16,12 +16,21 @@
       <description>&lt;p&gt;No, we&amp;rsquo;re not stopping with development of BoredOS, that will of course continue. We are simply stopping making releases (eg 26.6.0).&lt;/p&gt;
 &lt;p&gt;Maintaining releases creates a lot of friction, and we often see situations like this:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: I downloaded BoredOS and it doesn&amp;rsquo;t boot
-&lt;em&gt;dev&lt;/em&gt;: What version?
-&lt;em&gt;user&lt;/em&gt;: idk, 26.6 or something
-&lt;em&gt;dev&lt;/em&gt;: Try the nightly build
-&lt;em&gt;user&lt;/em&gt;: wow that works
-This happens frequently enough that we&amp;rsquo;ve decided releases aren&amp;rsquo;t worth maintaining.&lt;/p&gt;</description>
+&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: I downloaded BoredOS and it doesn&amp;rsquo;t boot&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;dev&lt;/em&gt;: What version?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: idk, 26.6 or something&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;dev&lt;/em&gt;: Try the nightly build&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;user&lt;/em&gt;: wow that works&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This happens frequently enough that we&amp;rsquo;ve decided releases aren&amp;rsquo;t worth maintaining.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Welcome to the BoredOS Blog</title>
